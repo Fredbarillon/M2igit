@@ -43,6 +43,22 @@ git add .
 
 ---
 
+## 📝 Commit rapide avec -am
+
+```bash
+git commit -am "message"
+```
+
+➡️ Ajoute et commit d’un coup tous les fichiers déjà suivis par Git.
+
+⚠️ Important :
+
+    Cette commande ne fonctionne que pour les fichiers déjà trackés (déjà ajoutés une fois avec git add).
+
+    Les nouveaux fichiers (non suivis) ne seront pas inclus. Pour cela, utilise d’abord git add.
+
+---
+
 ## 🧾 Créer un commit
 
 ```bash
