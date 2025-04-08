@@ -78,7 +78,29 @@ git push
 ➡️ Envoie les commits vers le dépôt distant pour la branche courante, **si le lien a été défini** avec `-u` précédemment.
 
 ---
+## 🚀 Pousser une nouvelle branche sur GitHub
 
+```bash
+git push origin nouvelle-branche
+```
+
+➡️ Envoie la branche nouvelle-branche vers le dépôt distant origin, sans configurer le suivi automatique.
+📌 Si tu veux configurer le suivi en même temps :
+
+```bash
+git push -u origin nouvelle-branche
+```
+
+➡️ Cela configure nouvelle-branche pour que les prochains git push ou git pull fonctionnent sans re-spécifier origin ni le nom de la branche.
+🔍 Vérifier le suivi :
+
+```bash
+git branch -vv
+```
+
+➡️ Tu verras les branches locales avec leur lien éventuel à une branche distante.
+
+---
 ## 🔄 Récupérer les dernières modifications
 
 ```bash
@@ -87,17 +109,50 @@ git pull
 ➡️ Récupère les dernières modifications du dépôt distant et les **fusionne** avec ta branche locale.
 
 ---
-
 ## 📥 Récupérer sans fusionner : `fetch`
 
 ```bash
 git fetch
 ```
-➡️ Récupère les commits depuis le dépôt distant, **sans les fusionner** automatiquement.  
-Tu peux ensuite explorer ou comparer manuellement.
+➡️ Récupère les commits depuis le dépôt distant, **sans les fusionner** automatiquement. Utile pour récuperer une branche sans toucher à main local et/ou explorer ou comparer manuellement.
 
 ---
+## 🔎 Afficher les infos d’un dépôt distant
 
+git remote show origin
+
+➡️ Affiche les détails complets d’un remote (origin dans cet exemple) :
+
+    URL
+
+    Branche suivie
+
+    Statut de push/pull
+
+    Infos sur le suivi de branches
+
+---
+## ✏️ Renommer un remote
+
+git remote rename ancien-nom nouveau-nom
+
+➡️ Change le nom d’un dépôt distant.
+📌 Exemple :
+
+git remote rename origin github
+
+➡️ Le remote s’appellera désormais github au lieu de origin.
+❌ Supprimer un remote
+
+git remote remove nom-du-remote
+
+ou
+
+git remote rm nom-du-remote
+
+➡️ Supprime le lien vers un dépôt distant (ne supprime pas le dépôt en ligne).
+
+---
 ## 🧠 Résumé des remotes
 
 | Commande                           | Action                                |
