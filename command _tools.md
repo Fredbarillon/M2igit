@@ -55,4 +55,4 @@ touch README.md
 ➡️ Fichier souvent utilisé pour décrire un projet GitHub.
 
 ---
-https://devhints.io/vim ==>??
+https://devhints.io/vim ==> vim i(insertion echap) : (commande)+ wq ou x
