@@ -82,7 +82,7 @@ git push
 
 ```bash
 git push origin nouvelle-branche
-```
+``` 
 
 ➡️ Envoie la branche nouvelle-branche vers le dépôt distant origin, sans configurer le suivi automatique.
 📌 Si tu veux configurer le suivi en même temps :
