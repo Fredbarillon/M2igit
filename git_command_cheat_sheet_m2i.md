@@ -62,6 +62,7 @@ git commit -am "message"
 
 ```bash
 git commit -m "message"
+git commit --allow-empty -m "simple message no modification"
 ```
 ➡️ Enregistre les fichiers ajoutés avec un message descriptif.
 
@@ -423,3 +424,17 @@ git config --global alias.last "log -1 HEAD"
 ➡️ Crée des alias personnalisés pour taper moins !
 
 ---
+## 🌀 Utiliser ~ pour naviguer dans l’historique (HEAD~)
+
+~ est un raccourci Git pour remonter dans l’historique des commits.
+📌 Syntaxe :
+
+```bash
+HEAD~n
+```
+
+➡️ Signifie "le commit n positions avant le HEAD (le dernier commit actuel)".
+
+    HEAD~1 = le commit juste avant le dernier
+
+    HEAD~2 = deux commits avant, etc.

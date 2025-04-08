@@ -77,11 +77,7 @@ S’il y a des conflits : Git te demande de les résoudre.
 1. Ouvre les fichiers concernés
 2. Cherche les balises :
 ```text
-<<<<<<< HEAD
-ton contenu actuel
-=======
-le contenu de l'autre branche
->>>>>>> nom-de-branche
+
 ```
 3. Choisis ce que tu veux garder
 4. Termine avec :
@@ -117,3 +113,11 @@ git push origin --delete nom-de-branche
 git push -u origin nom-de-branche
 ```
 ➡️ Pousse la branche vers GitHub et définit le suivi distant.
+
+
+---
+## 🔄 Réécrire l’historique avec git rebase
+
+git rebase branche-cible
+
+➡️ Replace les commits de la branche en cours au sommet de branche-cible, comme si tout avait été développé à partir d’elle.
