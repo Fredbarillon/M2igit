@@ -88,7 +88,27 @@ Imaginons une application bancaire.
 
 ---
 
-## 📚 6. Cas d'utilisation vs technique
+## 📒 6. Focus : logique métier vs interactions
+
+- Le diagramme de cas d'utilisation **n'intègre pas la logique métier interne** (ex : calculs, règles de gestion, traitement d'erreurs).
+- Ces éléments doivent être modélisés dans d'autres diagrammes UML :
+  - **Diagramme d'activité** : flux logique
+  - **Diagramme de séquence** : chronologie des interactions
+  - **Diagramme de classes** : structure des entités
+
+### 📌 Bonnes pratiques
+
+| Idée                              | Verdict     | Commentaire rapide |
+|----------------------------------|-------------|---------------------|
+| Écarter la logique métier        | ✅           | À traiter dans d'autres types de diagrammes |
+| Cas d’utilisation = interactions | ✅           | Uniquement ce que voit ou fait un acteur |
+| Cas sans acteur direct           | ✅           | OK s’ils dépendent de cas reliés à des acteurs |
+| Cas entièrement techniques       | ⚠️ À éviter  | À modéliser ailleurs, sauf si impact visible pour un acteur |
+
+
+---
+
+## 📚 7. Cas d'utilisation vs technique
 
 - Un cas d'utilisation est **indépendant de l'implémentation** :
   - Il ne dit pas *comment* une fonctionnalité est codée.
@@ -96,7 +116,7 @@ Imaginons une application bancaire.
 
 ---
 
-## 📃 7. Documentation recommandée
+## 📃 8. Documentation recommandée
 
 Pour chaque cas d'utilisation dans un diagramme, on peut associer une **fiche descriptive** avec :
 - Objectif du cas
@@ -108,7 +128,7 @@ Pour chaque cas d'utilisation dans un diagramme, on peut associer une **fiche de
 
 ---
 
-## ⚠️ 8. Limites du diagramme de cas d'utilisation
+## ⚠️ 9. Limites du diagramme de cas d'utilisation
 
 - ❌ **Ne montre pas la chronologie** :
   - On ne sait pas dans quel ordre les actions se produisent.
