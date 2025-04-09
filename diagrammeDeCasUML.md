@@ -65,6 +65,15 @@ Imaginons une application bancaire.
 
 ---
 
+### 🧱 Représentation du système
+
+- Le **système** est représenté par un **rectangle** (ou cadre).
+- Le **nom du système** est écrit dans un coin (généralement en haut).
+- Tous les **cas d'utilisation** sont placés **à l’intérieur** de ce rectangle.
+- Les **acteurs** (humains, organisations, systèmes externes) sont situés **à l’extérieur** du rectangle et interagissent avec les cas via des traits.
+
+---
+
 ## 📌 À retenir
 
 - **Un acteur peut interagir avec plusieurs cas d’utilisation**.
