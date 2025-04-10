@@ -107,9 +107,79 @@ La **multiplicité** se note aux extrémités d'une association pour préciser c
 4. Regarder les **relations** (types et multiplicités).
 5. Identifier les liens d'héritage pour voir la hiérarchie.
 
-> 📒 Astuce : un diagramme de classe est une **vue logique du code orienté objet**.
-
+> 📒 Astuce : un diagramme de classe est une **vue logique du code orienté objet**. On construit d'abord les classes et les raltions, on rempli après.
 ---
 
-Souhaites-tu que je t'ajoute un **exemple illustré** (genre Client/Commande/Produit) ?
 
+ exemple:voir diagramme
+ ```bash
+ @startuml
+class Bibliotheque {
+  - documents : List<Document>
+  - adherents : List<Adherent>
+  + ajouterDocument( Document)
+  + inscrire(Adherent)
+  + desinscrire(Adherent)
+  + checkLivresEmpruntes(Adherent)
+}
+
+class Adherent {
+  - prenom : string
+  - nom : string
+  - livresEmpruntes : List<Livre>
+  + emprunter(Livre)
+  + rendre(Livre)
+}
+
+class Emprunt {
+  - dateEmprunt : date
+  - dateRetour : date
+  + prolonger()
+}
+
+' === DOCUMENTS ===
+class Document {
+  - titre : string
+}
+
+class Journal {
+  - dateParution : date
+}
+
+class Volume {
+  - auteur : string
+}
+
+class Livre {
+  - isRented : bool
+  + tousLesGetters()
+}
+
+class Bd {
+  - dessinateur : string
+}
+
+class Dictionnaire {
+}
+
+' === HERITAGE ===
+
+Document <|-- Journal
+Document <|-- Volume
+
+Volume <|-- Livre
+Volume <|-- Bd
+Volume <|-- Dictionnaire
+
+' === ASSOCIATIONS ===
+
+Bibliotheque "1" o-- "*" Document : contient
+Bibliotheque "1" o-- "*" Adherent : gère
+
+Adherent "1" o-- "0..3" Livre : emprunte
+Emprunt "1" o-- "1" Livre : concerne
+Emprunt "1" o-- "1" Adherent : effectué par
+
+Livre "0..1" --> "0..1" Emprunt : est associé à
+@enduml
+```
