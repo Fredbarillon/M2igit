@@ -53,6 +53,7 @@ Une classe est représentée sous forme d'un rectangle à 3 compartiments :
 - Association avec **losange vide** du côté du "tout".
 - Représente une relation *part-of* faible (l'objet peut exister indépendamment).
 - 💡 *Similaire à `<<include>>` dans les diagrammes de cas d'utilisation : une fonctionnalité utilisée par une autre, mais les deux restent indépendantes.*
+la destruction de cette classe n'entraine pas la destruction de l'autre
 
 ### Composition
 - Association avec **losange plein** du côté du "tout".
