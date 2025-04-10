@@ -22,6 +22,10 @@ participant "Service Authentification" as Auth
 - Des **barres d'activation** apparaissent lors de l'exécution d'une opération.
 
 ---
+## Action
+activate Client
+deactivate Client
+
 
 ## 📩 Types de messages
 
