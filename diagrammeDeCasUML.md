@@ -142,3 +142,13 @@ Pour chaque cas d'utilisation dans un diagramme, on peut associer une **fiche de
 
 - ❌ **Pas adapté pour les fonctions internes ou non-fonctionnelles** (performances, sécurité, etc.).
 
+exemple de tables en uml:
+@startuml
+class "Individus" as Table {
+  | Prénom | Sexe | Âge | Métier        | Expérience |
+  | Julie  | F    | 24  | Électricienne | 4          |
+  | Francoise | F | 40  | Comptable     | 30         |
+  | Romain | M    | 30  | Développeur   | NULL       |
+  | Manuel | M    | 39  | Professeur    | 12         |
+}
+@enduml
