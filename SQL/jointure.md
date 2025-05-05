@@ -178,3 +178,6 @@ GROUP BY j1.job_title, j1.salary;
 
     Ici, on compare le salaire d’une personne à la moyenne des salaires de son métier — grâce à une auto-jointure.
 
+## Pour voir l'utilité des index ou pas:
+EXPLAIN SELECT * FROM...  pour check si l'index est utilisé par le sgbd
+automatiser des scripts d'explain select pour check son idexation et la vitesse du site
