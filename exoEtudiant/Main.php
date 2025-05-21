@@ -40,11 +40,18 @@ echo "table créé !", PHP_EOL;
 // $etudiant = new Etudiant(null, "mimi", "matty", $dob , "rand@om2.com");
 // print_r($etudiant);
 $etudiantRepo = new StudentRepo($pdo); 
-// $etudiantSauvegarde = $etudiantRepo->saveOneStudent($etudiant); 
 
 
 // echo $etudiantSauvegarde->id; 
 // echo $etudiantSauvegarde->name;
-$etudiantRepo->updateStudent(new Etudiant(2, "mimi", "mattou", new DateTime("2085-06-06 00:00:00"), "doc@oc.fr"));
-$etudiantRepo->deleteStudent(2);
-$etudiantRepo->getAllStudents();
+try {
+    // $etudiantSauvegarde = $etudiantRepo->saveOneStudent($etudiant); 
+    $etudiantRepo->updateStudent(new Etudiant(2, "mimi", "mattou", new DateTime("2085-06-06 00:00:00"), "doc@oc.fr"));
+    $etudiantRepo->deleteStudent(2);
+    $etudiantRepo->getAllStudents();
+}catch (Exception $e){
+    echo "Erreur : ", $e->getMessage(), PHP_EOL;    
+}finally{
+    $pdo = null; 
+    echo "connexion fermée !", PHP_EOL; 
+}
