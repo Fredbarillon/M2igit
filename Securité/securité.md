@@ -222,9 +222,6 @@ Les défaillances cryptographiques concernent l’usage de protocoles ou algorit
 
     Utiliser des certificats valides et renouvelés automatiquement.
 
-Sécurité Applicative - Notes de cours
-
-(... contenu précédent inchangé ...)
 
 14. Concepts complémentaires (approfondissement)
 
