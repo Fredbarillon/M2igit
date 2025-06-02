@@ -106,6 +106,7 @@ Code	Signification
 10. 🧠 Injection de dépendances (DI)
 
     🔎 Symfony injecte automatiquement les services dont tu as besoin grâce à son container.
+    mais attention si on cree nos services , il faut les declarer ces servicees dans le service.yaml en specifiant le path
 
 🔁 Schéma exemple :
 
